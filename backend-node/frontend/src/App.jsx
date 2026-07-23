@@ -1598,6 +1598,7 @@ const PublicLayout = () => {
 
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/coming-soon" element={<ComingSoonPage />} />
           <Route path="/products" element={<ProductsPage />} />
           <Route path="/products/:categorySlug" element={<CategoryPage />} />
           <Route path="/products/:categorySlug/:productSlug" element={<ProductDetailPage />} />
@@ -1669,27 +1670,8 @@ const AppRoutes = () => {
 };
 
 const App = () => {
-  const path = window.location.pathname;
-
-  // 1. Root URL displays Coming Soon Page
-  if (path === '/') {
-    return <ComingSoonPage />;
-  }
-
-  // 2. Admin URL routes normally
-  const isAdmin = path.startsWith('/admin');
-  if (isAdmin) {
-    return (
-      <Router>
-        <ScrollToTop />
-        <AppRoutes />
-      </Router>
-    );
-  }
-
-  // 3. Main FAAZO website runs under /home basename
   return (
-    <Router basename="/home">
+    <Router>
       <ScrollToTop />
       <TitleUpdater />
       <AppRoutes />

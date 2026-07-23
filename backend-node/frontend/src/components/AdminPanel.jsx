@@ -736,7 +736,7 @@ export const AdminPanel = () => {
             </p>
           </div>
           <div className="flex items-center gap-3">
-            <Link to="/home" className="flex items-center gap-1.5 text-xs font-bold text-[#0A7C86] hover:underline bg-[#E6F3F5] px-4 py-2.5 rounded-lg border border-[#0A7C86]/20">
+            <Link to="/" className="flex items-center gap-1.5 text-xs font-bold text-[#0A7C86] hover:underline bg-[#E6F3F5] px-4 py-2.5 rounded-lg border border-[#0A7C86]/20">
               <ArrowLeft className="w-4.5 h-4.5" /> Exit to Homepage
             </Link>
             <button 
