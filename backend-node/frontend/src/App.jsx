@@ -589,11 +589,17 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right Column (Expanded Image - Touches Right Edge) */}
-          <div className="order-1 lg:order-2 lg:col-span-7 relative h-[320px] sm:h-[450px] md:h-[550px] lg:h-[650px] xl:h-[720px] w-full overflow-hidden group hero-image-mask">
-            <img src="/hero/hero_faazo.png"
-              alt="Dental Professionals"
-              className="absolute inset-0 w-full h-full object-cover select-none pointer-events-none hero-doctor-img" />
+          {/* Right Column (Flagship Dental Equipment Showcase) */}
+          <div className="order-1 lg:order-2 lg:col-span-7 relative h-[380px] sm:h-[480px] md:h-[580px] lg:h-[660px] xl:h-[720px] w-full flex items-center justify-center lg:justify-end pr-2 lg:pr-8 select-none">
+            {/* Ambient medical glow backdrop */}
+            <div className="absolute w-[85%] h-[85%] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(46,165,176,0.18)_0%,rgba(14,124,134,0.06)_50%,transparent_75%)] pointer-events-none blur-3xl -z-10" />
+            
+            {/* Crisp transparent dental unit with subtle 3D grounding shadow */}
+            <img
+              src="/hero/hero_chair_transparent.png"
+              alt="FAAZO Advanced Dental Operating System"
+              className="w-full h-full max-h-[700px] object-contain object-center lg:object-right select-none pointer-events-none drop-shadow-[0_25px_35px_rgba(0,85,95,0.10)] transition-transform duration-700 ease-out hover:scale-[1.015]"
+            />
           </div>
 
         </div>
